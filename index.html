@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Image Gallery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet" />
+</head>
+
+<body class="container">
+	<br />
+	<h1>New Zealand</h1>
+	<P>The sky is blue, the grass is green. The sun shines through the window.</P> 
+	<section class="gallery">
+		<div class="img-grid">
+			<div class="gallery-item image-a" data-name="./img/a.jpg"></div>
+			<div class="gallery-item image-b" data-name="./img/b.jpg"></div>
+			<div class="gallery-item image-c" data-name="./img/c.jpg"></div>
+			<div class="gallery-item image-d" data-name="./img/d.jpg"></div>
+		</div>
+	</section>
+	<!-- Modal -->
+	<div class="modal" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Lake Wakatipu</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<img src="img/a.jpg" class="modal-img" alt="modal img" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

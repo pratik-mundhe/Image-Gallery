@@ -1,0 +1,143 @@
+:root {
+  --img-size: 500px;
+}
+
+@media (max-width: 1250px) {
+  :root {
+    --img-size: 400px;
+  }
+}
+
+@media (max-width: 998px) {
+  :root {
+    --img-size: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --img-size: 150px;
+  }
+}
+
+.container {
+  background-color: #48cccd;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-family: 'Merriweather Sans', 'Arvo';
+  font-weight: bolder;
+}
+
+p{
+  text-align: center;
+  color: white;
+  font-family: 'Merriweather Sans', 'Arvo';
+} 
+
+.gallery {
+  display: grid;
+  place-items: center;
+  padding: calc(var(--img-size) / 10);
+}
+
+.img-grid {
+  display: grid;
+  grid-auto-rows: var(--img-size);
+  grid-template-columns: 1fr 1fr;
+  grid-gap: calc(var(--img-size) / 10);
+}
+ 
+.gallery-item {
+  height: var(--img-size);
+  width: var(--img-size);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.image-a {
+  background-image: url('../img/a.jpg');
+  border-radius: 50%;
+}
+
+.image-a:hover{
+  opacity: .5;
+}
+
+.image-b:hover{
+  opacity: .5;
+}
+
+.image-c:hover{
+  opacity: .5;
+}
+
+.image-d:hover{
+  opacity: .5;
+}
+
+.image-b {
+  background-image: url('../img/b.jpg');
+  transform: scale(1, 0.6);
+}
+
+.image-c {
+  background-image: url('../img/c.jpg');
+}
+
+.image-d {
+  position: relative;
+  background-image: url('../img/d.jpg');
+  overflow: hidden;
+}
+
+.image-d:before {
+  content: '';
+  position: absolute;
+  height: 120%;
+  width: 50%;
+  bottom: 0%;
+  left: -50%;
+  background-color: #48cccd;
+  transform: rotate(30deg);
+  transform-origin: bottom right;
+}
+
+.image-d:after {
+  content: '';
+  position: absolute;
+  height: 120%;
+  width: 50%;
+  bottom: 0%;
+  right: -50%;
+  background-color: #48cccd;
+  transform: rotate(-30deg);
+  transform-origin: bottom left;
+}
+
+/* Modal page*/
+img {
+  max-width: 100%;
+  display: flex;
+}
+
+#gallery-modal .modal-img {
+  width: 100%;
+}
+
+.modal-header {
+  font-size: 2rem;
+  color: white;
+  font-family: 'Merriweather Sans', 'Arvo';
+  font-weight: bolder;
+}
+
+.modal,
+.modal-content {
+  background-color: #48cccd;
+}
